@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setupService set up delete methods correctly 1`] = `Array []`;
+
+exports[`setupService set up get method correctly 1`] = `Array []`;
+
+exports[`setupService set up post methods correctly 1`] = `Array []`;

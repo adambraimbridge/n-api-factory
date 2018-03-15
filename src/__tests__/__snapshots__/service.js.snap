@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setupService set up delete methods correctly 1`] = `
+Array [
+  Array [
+    "http://mock.com/test/xxxx",
+    Object {
+      "headers": Object {
+        "Content-Type": "application/json",
+        "FT-Transaction-Id": "xxxx",
+        "X-Origin-System-Id": "https://cmdb.ft.com/systems/newspaper-mma",
+        "X-Origin-User": "customer",
+        "x-api-key": "mock.key",
+      },
+      "method": "DELETE",
+    },
+  ],
+]
+`;
+
+exports[`setupService set up get method correctly 1`] = `
+Array [
+  Array [
+    "http://mock.com/test",
+    Object {
+      "headers": Object {
+        "Content-Type": "application/json",
+        "FT-Transaction-Id": "xxxx",
+        "X-Origin-System-Id": "https://cmdb.ft.com/systems/newspaper-mma",
+        "X-Origin-User": "customer",
+        "x-api-key": "mock.key",
+      },
+      "method": "GET",
+    },
+  ],
+]
+`;
+
+exports[`setupService set up post methods correctly 1`] = `
+Array [
+  Array [
+    "http://mock.com/test",
+    Object {
+      "body": "{\\"test\\":\\"test\\"}",
+      "headers": Object {
+        "Content-Type": "application/json",
+        "FT-Transaction-Id": "xxxx",
+        "X-Origin-System-Id": "https://cmdb.ft.com/systems/newspaper-mma",
+        "X-Origin-User": "customer",
+        "x-api-key": "mock.key",
+      },
+      "method": "POST",
+    },
+  ],
+]
+`;

@@ -1,0 +1,36 @@
+import fetch from 'node-fetch';
+import { trimObject } from '@financial-times/n-utils';
+import { parseFetchError } from '@financial-times/n-error';
+
+export const defaultHeaders = ({
+	API_KEY,
+	transactionId,
+	systemId = process.env.SYSTEM_CODE,
+	user = 'customer',
+}) =>
+	trimObject({
+		'Content-Type': 'application/json',
+		'x-api-key': API_KEY,
+		'FT-Transaction-Id': transactionId,
+		'X-Origin-System-Id': `https://cmdb.ft.com/systems/${systemId}`,
+		'X-Origin-User': user,
+	});
+
+export const fetchWithErrorParser = async (url, options) => {
+	try {
+		const response = await fetch(url, options);
+
+		if (!response.ok) {
+			throw response;
+		}
+		// in case of 'NO CONTENT'
+		const contentLength = parseInt(response.headers.get('content-length'), 10);
+		if (response.status === 204 || contentLength === 0) {
+			return undefined;
+		}
+		return await response.json();
+	} catch (e) {
+		const parsed = await parseFetchError(e);
+		throw parsed;
+	}
+};

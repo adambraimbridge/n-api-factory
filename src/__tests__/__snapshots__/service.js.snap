@@ -21,7 +21,7 @@ Array [
 exports[`setupService set up get method correctly 1`] = `
 Array [
   Array [
-    "http://mock.com/test",
+    "http://mock.com/test?foo=bar",
     Object {
       "headers": Object {
         "Content-Type": "application/json",

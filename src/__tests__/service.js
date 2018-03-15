@@ -32,6 +32,7 @@ describe('setupService', () => {
 		const res = await service.get({
 			endpoint: '/test',
 			meta: { transactionId },
+			query: { foo: 'bar' },
 		});
 		expect(res).toEqual({ data: 'test' });
 		expect(fetch.mock.calls).toMatchSnapshot();

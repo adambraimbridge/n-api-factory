@@ -104,8 +104,8 @@ export const addSomeResource = (body, meta) => yourApiService.post({
 ### auto log and metrics
 ```js
 export default compose(
-	autoMetricsActions('name-of-api-service'),
-	autoLogActions,
+  autoMetricsActions('name-of-api-service'),
+  autoLogActions,
 )({
   getSomeResource,
   addSomeResource,

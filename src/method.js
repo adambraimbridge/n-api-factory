@@ -28,7 +28,11 @@ export const fetchWithErrorParser = async (url, options) => {
 		if (response.status === 204 || contentLength === 0) {
 			return undefined;
 		}
-		return await response.json();
+
+		const contentType = response.headers.get('content-type');
+		const parseMethod =
+			contentType && contentType.includes('application/json') ? 'json' : 'text';
+		return await response[parseMethod]();
 	} catch (e) {
 		const parsed = await parseFetchError(e);
 		throw parsed;

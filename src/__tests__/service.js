@@ -13,7 +13,16 @@ jest.mock('node-fetch', () =>
 	jest.fn(() => ({
 		ok: true,
 		headers: {
-			get: () => 5,
+			get: field => {
+				switch (field) {
+					case 'content-type':
+						return 'application/json';
+					case 'content-length':
+						return 5;
+					default:
+						return undefined;
+				}
+			},
 		},
 		json: () => ({
 			data: 'test',

@@ -2,6 +2,15 @@
 
 api service creator using `n-fetch` pattern, throws `n-error`, friendly to `n-auto-logger`, `n-auto-metrics` 
 
+- [quickstart](#quickstart)
+- [install](#install)
+- [usage](#usage)
+  * [extend error handling](#extend-error-handling)
+  * [default headers](#default-headers)
+  * [extend headers](#extend-headers)
+  * [auto log and metrics](#auto-log-and-metrics)
+- [example](#example)
+
 ## quickstart
 
 ```js
@@ -31,6 +40,11 @@ export const deleteSomeResource = ({ someId }, meta) => yourApiService.delete({
   endpoint: `/some-endpoint/${someId}`,
   meta,
 }); // would return `undefined` if response `NO-CONTENT`
+```
+
+## install
+```shell
+npm install @financial-times/n-api-factory
 ```
 
 ## usage

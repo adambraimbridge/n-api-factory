@@ -42,11 +42,11 @@ import nError, { CATEGORIES } from '@financial-times/n-error';
 export const getAddress = async (params, meta) => {
   try {
     const address = await addressService.get({ endpoint, meta });
+    
     if(validate(address)){
-      throw nError.unauthorised({
-        message: 'some message',
-      }); // throw an nError of CUSTOM_ERROR category
+      throw nError.unauthorised({ message: 'some message' }); // throw an nError of CUSTOM_ERROR category
     }
+    
     return address;
   } catch(e) {
     throw e;

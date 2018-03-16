@@ -7,7 +7,7 @@ export const setupMethod = ({ method, API_HOST, API_KEY }) => ({
 	endpoint,
 	query,
 	body,
-	meta,
+	meta = {},
 	headers,
 }) => {
 	const { transactionId } = meta;

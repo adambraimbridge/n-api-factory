@@ -93,7 +93,7 @@ trimObject({
 
 ### extend headers
 ```js
-export const addSomeResource = (body, meta) => yourApiService.post({
+export const addSomeResource = ({ body }, meta) => yourApiService.post({
   endpoint: `/some-endpoint/`,
   body,
   meta,

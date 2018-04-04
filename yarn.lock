@@ -68,12 +68,12 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@financial-times/n-error@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@financial-times/n-error/-/n-error-1.0.2.tgz#e2b6516b523d90eba0df607ed45d675e2a354ef6"
+"@financial-times/n-error@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@financial-times/n-error/-/n-error-1.0.5.tgz#7ade8f97ee0d051a4c1a2a47c0b25790f0b8c18f"
   dependencies:
-    "@financial-times/n-utils" "^0.0.2"
-    camelcase "^4.1.0"
+    "@financial-times/n-utils" "^0.1.0"
+    camelcase "^5.0.0"
     isomorphic-fetch "^2.2.1"
     node-fetch "^2.0.0"
 
@@ -111,9 +111,9 @@
     request "^2.83.0"
     winston "^2.4.0"
 
-"@financial-times/n-utils@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@financial-times/n-utils/-/n-utils-0.0.2.tgz#0533375bdbc106a6319ff1dc2cac3a7dddcace16"
+"@financial-times/n-utils@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@financial-times/n-utils/-/n-utils-0.1.0.tgz#2ba1deb0e47aea7fe553a516b3f18fa5088abb17"
 
 "@financial-times/secret-squirrel@^2.6.0":
   version "2.7.0"
@@ -1118,6 +1118,10 @@ camelcase@^1.0.2:
 camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
+
+camelcase@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.0.0.tgz#03295527d58bd3cd4aa75363f35b2e8d97be2f42"
 
 caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
   version "1.0.30000808"

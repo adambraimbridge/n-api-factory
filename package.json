@@ -16,8 +16,8 @@
     "prepush": "make lint unit-test && make verify -j3"
   },
   "dependencies": {
-    "@financial-times/n-error": "^1.0.2",
-    "@financial-times/n-utils": "^0.0.2",
+    "@financial-times/n-error": "^1.0.5",
+    "@financial-times/n-utils": "^0.1.0",
     "node-fetch": "^2.0.0"
   },
   "devDependencies": {

@@ -61,14 +61,7 @@ describe('fetchWithErrorParser', () => {
 			await fetchWithErrorParser(`${config.API_HOST}`);
 			throw new Error('it should throw an exception');
 		} catch (e) {
-			expect(e).toEqual({
-				category: 'FETCH_RESPONSE_ERROR',
-				contentType: 'application/json',
-				status: 404,
-				message: {
-					message: 'some message',
-				},
-			});
+			expect(e).toMatchSnapshot();
 		}
 	});
 });

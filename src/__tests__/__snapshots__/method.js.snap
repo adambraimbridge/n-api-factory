@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetchWithErrorParser return formatted error correctly if response is error 1`] = `
+NError {
+  "category": "FETCH_RESPONSE_ERROR",
+  "contentType": "application/json",
+  "message": Object {
+    "message": "some message",
+  },
+  "status": 404,
+}
+`;

@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`setupService method setup can be used without meta 1`] = `
+Array [
+  Array [
+    "http://mock.com/test/xxxx",
+    Object {
+      "headers": Object {
+        "Content-Type": "application/json",
+        "X-Origin-System-Id": "https://cmdb.ft.com/systems/newspaper-mma",
+        "X-Origin-User": "customer",
+        "x-api-key": "mock.key",
+      },
+      "method": "DELETE",
+    },
+  ],
+]
+`;
+
 exports[`setupService set up delete methods correctly 1`] = `
 Array [
   Array [

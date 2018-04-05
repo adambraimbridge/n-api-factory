@@ -40,8 +40,8 @@ describe('setupService', () => {
 		const transactionId = 'xxxx';
 		const res = await service.get({
 			endpoint: '/test',
-			meta: { transactionId },
 			query: { foo: 'bar' },
+			meta: { transactionId },
 		});
 		expect(res).toEqual({ data: 'test' });
 		expect(fetch.mock.calls).toMatchSnapshot();
@@ -62,6 +62,12 @@ describe('setupService', () => {
 		const service = setupService(config);
 		const transactionId = 'xxxx';
 		await service.delete({ endpoint: '/test/xxxx', meta: { transactionId } });
+		expect(fetch.mock.calls).toMatchSnapshot();
+	});
+
+	it('method setup can be used without meta', async () => {
+		const service = setupService(config);
+		await service.delete({ endpoint: '/test/xxxx' });
 		expect(fetch.mock.calls).toMatchSnapshot();
 	});
 });

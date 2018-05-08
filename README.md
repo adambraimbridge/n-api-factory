@@ -57,8 +57,8 @@ It is handy to use flag to switch between TEST/PROD api
 const useTestApi = flags.get('name-of-the-flag');
 
 const config = {
- API_HOST: process.env[`THE_API_HOST_${useTestApi || devEnv ? 'TEST : 'PROD'}`],
- API_KEY: process.env[`THE_API_KEY_${useTestApi || devEnv ? 'TEST : 'PROD'}`],,
+ API_HOST: process.env[`THE_API_HOST_${useTestApi || devEnv ? 'TEST' : 'PROD'}`],
+ API_KEY: process.env[`THE_API_KEY_${useTestApi || devEnv ? 'TEST' : 'PROD'}`],
 };
 
 const theService = setupService(config);

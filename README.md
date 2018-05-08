@@ -5,11 +5,11 @@ api service creator using `n-fetch` pattern, throws `n-error`, friendly to `n-au
 - [quickstart](#quickstart)
 - [install](#install)
 - [usage](#usage)
+  * [switch TEST/PROD api](#switch-test-prod-api)
   * [extend error handling](#extend-error-handling)
   * [default headers](#default-headers)
   * [extend headers](#extend-headers)
   * [auto log and metrics](#auto-log-and-metrics)
-- [example](#example)
 
 ## quickstart
 
@@ -48,6 +48,21 @@ npm install @financial-times/n-api-factory
 ```
 
 ## usage
+
+### switch TEST/PROD api
+
+It is handy to use flag to switch between TEST/PROD api
+
+```js
+const useTestApi = flags.get('name-of-the-flag');
+
+const config = {
+ API_HOST: process.env[`THE_API_HOST_${useTestApi || devEnv ? 'TEST : 'PROD'}`],
+ API_KEY: process.env[`THE_API_KEY_${useTestApi || devEnv ? 'TEST : 'PROD'}`],,
+};
+
+const theService = setupService(config);
+```
 
 ### extend error handling
 ```js

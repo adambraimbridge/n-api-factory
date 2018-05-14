@@ -5,11 +5,12 @@ api service creator using `n-fetch` pattern, throws `n-error`, friendly to `n-au
 - [quickstart](#quickstart)
 - [install](#install)
 - [usage](#usage)
-  * [switch TEST/PROD api](#switch-test-prod-api)
+  * [switch TEST/PROD api](#switch-test/prod-api)
   * [extend error handling](#extend-error-handling)
   * [default headers](#default-headers)
   * [extend headers](#extend-headers)
   * [auto log and metrics](#auto-log-and-metrics)
+  * [transactionId from downstream request](#transactionid-from-downstream-request)
 
 ## quickstart
 

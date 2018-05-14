@@ -128,3 +128,11 @@ export default compose(
   deleteSomeResource
 });
 ```
+
+### transactionId from downstream request
+it is handy to get the transactionId from the request header and add it to the meta of the call.
+```js
+const transactionId = req.get('FT-Transaction-Id');
+const meta = { transactionId, ...otherMeta };
+SomeService.someMethod(params, meta);
+```

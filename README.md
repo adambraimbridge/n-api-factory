@@ -5,7 +5,7 @@ api service creator using `n-fetch` pattern, throws `n-error`, friendly to `n-au
 - [quickstart](#quickstart)
 - [install](#install)
 - [usage](#usage)
-  * [switch TEST/PROD api](#switch-test-prod-api)
+  * [switch TEST or PROD api](#switch-test-or-prod-api)
   * [extend error handling](#extend-error-handling)
   * [default headers](#default-headers)
   * [extend headers](#extend-headers)
@@ -50,7 +50,7 @@ npm install @financial-times/n-api-factory
 
 ## usage
 
-### switch TEST/PROD api
+### switch TEST or PROD api
 
 It is handy to use flag to switch between TEST/PROD api
 

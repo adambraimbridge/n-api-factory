@@ -137,3 +137,34 @@ const transactionId = req.get('FT-Transaction-Id');
 const meta = { transactionId, ...otherMeta };
 SomeService.someMethod(params, meta);
 ```
+
+### test stub
+
+use Jest.mock
+
+```js
+import subscriptionApi from '../subscription-api.js';
+
+const mockGet = jest.fn();
+jest.mock('@financial-times/n-api-factory', () =>
+	jest.fn().mockImplementation(() => ({
+		get: () => mockGet(),
+	})),
+);
+
+describe('subscriptionApi.getSubscriptions', () => {
+	afterEach(() => {
+		mockGet.mockReset();
+	});
+
+	it('return the subscriptions if valid subscriptions found', async () => {
+		const mockSubscriptions = [{ subscription: 'mock-subscription' }];
+		mockGet.mockImplementation(async () => mockSubscriptions);
+
+		const subscriptions = await getSubscriptions({ userId: 'mock-user-id' });
+		expect(subscriptions).toEqual(mockSubscriptions);
+	});
+});
+```
+
+You can also use `proxyquire` to mock the module in similar means if you are using `mocha` or other test tools.

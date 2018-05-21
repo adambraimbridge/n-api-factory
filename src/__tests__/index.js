@@ -1,12 +1,12 @@
-import defaultExport, {
+import setupService, {
 	defaultHeaders,
 	fetchWithErrorParser,
-	setupService,
+	setupMethod,
 } from '../index';
 
 describe('export correctly', () => {
-	it('defaultExport', () => {
-		expect(typeof defaultExport).toBe('function');
+	it('setupService', () => {
+		expect(typeof setupService).toBe('function');
 	});
 
 	it('defaultHeaders', () => {
@@ -17,7 +17,7 @@ describe('export correctly', () => {
 		expect(typeof fetchWithErrorParser).toBe('function');
 	});
 
-	it('setupService', () => {
-		expect(typeof setupService).toBe('function');
+	it('setupMethod', () => {
+		expect(typeof setupMethod).toBe('function');
 	});
 });

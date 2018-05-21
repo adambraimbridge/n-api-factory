@@ -148,23 +148,23 @@ import subscriptionApi from '../subscription-api.js';
 
 const mockGet = jest.fn();
 jest.mock('@financial-times/n-api-factory', () =>
-	jest.fn().mockImplementation(() => ({
-		get: () => mockGet(),
-	})),
+  jest.fn().mockImplementation(() => ({
+    get: () => mockGet(),
+  })),
 );
 
 describe('subscriptionApi.getSubscriptions', () => {
-	afterEach(() => {
-		mockGet.mockReset();
-	});
+  afterEach(() => {
+    mockGet.mockReset();
+  });
 
-	it('return the subscriptions if valid subscriptions found', async () => {
-		const mockSubscriptions = [{ subscription: 'mock-subscription' }];
-		mockGet.mockImplementation(async () => mockSubscriptions);
+  it('return the subscriptions if valid subscriptions found', async () => {
+    const mockSubscriptions = [{ subscription: 'mock-subscription' }];
+    mockGet.mockImplementation(async () => mockSubscriptions);
 
-		const subscriptions = await getSubscriptions({ userId: 'mock-user-id' });
-		expect(subscriptions).toEqual(mockSubscriptions);
-	});
+    const subscriptions = await getSubscriptions({ userId: 'mock-user-id' });
+    expect(subscriptions).toEqual(mockSubscriptions);
+  });
 });
 ```
 

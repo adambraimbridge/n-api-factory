@@ -11,6 +11,7 @@ api service creator using `n-fetch` pattern, throws `n-error`, friendly to `n-au
   * [extend headers](#extend-headers)
   * [auto log and metrics](#auto-log-and-metrics)
   * [transactionId from downstream request](#transactionid-from-downstream-request)
+  * [test stub](#test-stub)
 
 ## quickstart
 

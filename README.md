@@ -148,7 +148,7 @@ import subscriptionApi from '../subscription-api.js';
 
 const mockGet = jest.fn();
 jest.mock('@financial-times/n-api-factory', () =>
-  jest.fn().mockImplementation(() => ({
+  jest.fn(() => ({
     get: () => mockGet(),
   })),
 );

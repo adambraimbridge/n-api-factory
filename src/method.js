@@ -5,13 +5,14 @@ import { parseFetchError } from '@financial-times/n-error';
 export const defaultHeaders = ({
 	API_KEY,
 	transactionId,
+	requestId,
 	systemId = process.env.SYSTEM_CODE,
 	user = 'customer',
 }) =>
 	trimObject({
 		'Content-Type': 'application/json',
 		'x-api-key': API_KEY,
-		'FT-Transaction-Id': transactionId,
+		'FT-Transaction-Id': transactionId || requestId,
 		'X-Origin-System-Id': `https://cmdb.ft.com/systems/${systemId}`,
 		'X-Origin-User': user,
 	});

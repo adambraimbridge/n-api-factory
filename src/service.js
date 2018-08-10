@@ -10,10 +10,13 @@ export const setupMethod = ({ method, API_HOST, API_KEY }) => ({
 	meta = {},
 	headers,
 }) => {
-	const { transactionId } = meta;
+	const { transactionId, requestId } = meta;
 	const options = trimObject({
 		method,
-		headers: { ...defaultHeaders({ API_KEY, transactionId }), ...headers },
+		headers: {
+			...defaultHeaders({ API_KEY, transactionId, requestId }),
+			...headers,
+		},
 		body: body ? JSON.stringify(body) : undefined,
 	});
 	// query fields can be nullable

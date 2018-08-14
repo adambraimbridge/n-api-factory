@@ -1,6 +1,5 @@
-import fetch from 'node-fetch';
 import { trimObject } from '@financial-times/n-utils';
-import { parseFetchError } from '@financial-times/n-error';
+import { fetch, parseFetchError } from '@financial-times/n-error';
 
 export const defaultHeaders = ({
 	API_KEY,
